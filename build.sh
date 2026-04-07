@@ -69,7 +69,7 @@ mv "$IR_FILE.opt" "$IR_FILE"
 
 llc -filetype=obj "-O$OPT_LEVEL" "$IR_FILE" -o "$OBJ_FILE"
 
-clang "$OBJ_FILE" $EXTRA_LIBS -o "$OUT"
+cc "$OBJ_FILE" $EXTRA_LIBS -o "$OUT"
 
 echo "Build successful -> $OUT"
 
