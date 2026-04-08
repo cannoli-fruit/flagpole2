@@ -5,7 +5,7 @@ A stack-based programming language based on llvm
 Dependencies: llvm, cc of some sort
 
 ``` sh
-sudo ./install
+sudo ./install.sh
 fpc ./examples/helloworld.fp -o helloworld
 ./helloworld
 ```
