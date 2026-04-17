@@ -3,7 +3,7 @@
 mkdir -p /usr/lib/flagpole
 cp ./setup.ll /usr/lib/flagpole/setup.ll
 cp ./end.ll /usr/lib/flagpole/end.ll
-cp ./std.fp /usr/lib/flagpole/std.fp
+cp ./lib/* /usr/lib/flagpole/
 chmod +x /usr/lib/flagpole/fpcc
 cp ./llvm.py /usr/lib/flagpole/fpcc
 chmod +x /usr/bin/fpc
