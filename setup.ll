@@ -2,7 +2,7 @@
 @sp = global i64 0
 @fmt_int = private constant [6 x i8] c"%lld\0A\00"
 
-define i64 @__fp_internal_pop() {
+define i64 @__fp_internal_pop() nounwind willreturn {
 entry:
 	%sp_val = load i64, i64* @sp
 	%sp_next = sub i64 %sp_val, 1
@@ -15,7 +15,7 @@ entry:
 	ret i64 %val
 }
 
-define void @__fp_internal_push(i64 %x) {
+define void @__fp_internal_push(i64 %x) nounwind willreturn {
 entry:
 	%sp_val = load i64, i64* @sp
 	%ptr = getelementptr [1024 x i64],

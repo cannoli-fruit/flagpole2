@@ -168,6 +168,12 @@ while i < len(tokens):
   if token[0] == 1 and token[1] == "endproc":
     print(f"\tret void")
     print(f"}}")
+  if token[0] == 1 and token[1].startswith("@"):
+    varname = token[1][1:]
+    print(f"\t%__fp_user_var_{varname} = call i64 @__fp_internal_pop()")
+  if token[0] == 1 and token[1].startswith("&"):
+    varname = token[1][1:]
+    print(f"\tcall void @__fp_internal_push(i64 %__fp_user_var_{varname})")
   if token[0] == 1 and token[1] == "return":
     print(f"\tret void")
   if token[0] == 1 and token[1] == "i+":
