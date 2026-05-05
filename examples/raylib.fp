@@ -9,23 +9,30 @@ $extern CloseWindow
 $extern SetTargetFPS i
 $extern DrawText i i i i i
 
-# 42069
+
+proc rgba
+     16777216 i* swap
+     65536 i* i+ swap
+     255 i* i+ swap
+     i+
+endproc
 
 proc main
 	"Flagpole Raylib!" 450 800 :InitWindow drop
 	60 :SetTargetFPS drop
+	25 25 25 255 :rgba @col_gray
+	0 255 0 255 :rgba @col_green
 	while :WindowShouldClose not do
 		:BeginDrawing drop
 
-		4279769112 :ClearBackground drop
-		4278255360 20 200 190
+		&col_gray :ClearBackground drop
+		&col_green 20 200 190
 		"This was written in raylib"
 		:DrawText drop
 
-		4278255360 20 230 190
+		&col_green 20 230 190
 		"I'm sorry for raylib's default font though"
 		:DrawText drop
-
 	:EndDrawing drop
 	endwhile
 	:CloseWindow
