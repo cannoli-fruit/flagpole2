@@ -27,8 +27,8 @@ stdenv.mkDerivation rec {
   '';
 
   meta = with stdenv.lib; {
-    description = "Flagpole compiler/runtime";
-    license = licenses.mit; # set to correct license
+    description = "Flagpole compiler";
+    license = licenses.gpl;
     maintainers = with maintainers; [];
   };
 }
