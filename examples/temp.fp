@@ -1,11 +1,12 @@
 $inc std.fp
 
 proc main
-    1 "Is your source temp F or C?\0a" :printf
+    "Is your source temp F or C? " :puts
     :getline
     
     if dup "C\0a" :strcmp 0 == then
         drop
+	"Temp: " :puts
         :getint 9 i* 5 i/ 32 i+
         "Final temp: %d F\0a" :printf
         return
@@ -13,6 +14,7 @@ proc main
 
     if dup "F\0a" :strcmp 0 == then
         drop
+	"Temp: " :puts
         :getint 32 i- 5 i* 9 i/
         "Final temp: %d C\0a" :printf
         return
