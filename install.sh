@@ -6,5 +6,5 @@ cp ./end.ll /usr/lib/flagpole/end.ll
 cp ./lib/* /usr/lib/flagpole/
 cp ./llvm.py /usr/lib/flagpole/fpcc
 chmod +x /usr/lib/flagpole/fpcc
-cp ./build.sh /usr/bin/fpc
+cp ./compiler.sh /usr/bin/fpc
 chmod +x /usr/bin/fpc
