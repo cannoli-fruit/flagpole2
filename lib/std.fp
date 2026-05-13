@@ -6,6 +6,7 @@ $extern fputs i i
 $extern fgets i i i
 $extern fdopen i i
 $extern fflush i
+$extern atoi i
 
 proc getint
     8 :malloc dup
